@@ -1,15 +1,11 @@
 #!/bin/sh
-a=1
-sum=0
-echo "Enter value"
-read n
-while [ $a -le $n ]
-do 
+echo "Enter Salary"
+read sal
 
-b=$(( $a * $a ))
-sum=$(( $sum + $b ))
-a=$(( $a + 1 ))
-
-done
-echo "$sum"
-echo ""
+if [ $sal -ge 5000 ]
+then
+bonus=$(( $sal * 5 / 100 ))
+else
+bonus=250
+fi
+echo "Bonus is: $bonus"

@@ -1,13 +1,14 @@
 #!/bin/sh
-echo “enter basic salary”
-read bs
-hra=`echo $bs \* 10 / 100 | bc`
-ta=`echo $bs \* 15 / 100 | bc`
-da=`echo $bs \* 2 / 100 | bc`
-tax=`echo $bs \* 5 / 100 | bc`
-pf=`echo $bs \* 10 / 100 | bc`
-add=`echo $hra + $ta + $da | bc`
-ded=`echo $tax + $pf | bc`
-netsal=`echo $bs + $add - $ded | bc`
-echo
-echo net salary is $netsal
+echo "Enter a number"
+read n
+sd=0
+rev=0
+
+while [ $n -gt 0 ]
+do
+    sd=$(( $n % 10 ))
+    rev=$(( $rev * 10 + $sd ))
+    n=$(( $n / 10 ))
+done
+
+echo "Reverse number of entered digit is $rev"

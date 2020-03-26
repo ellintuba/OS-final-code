@@ -1,11 +1,12 @@
 #!/bin/sh
 a=1
-b=5
-while [ $b -le 50 ]
+echo "Enter value"
+read n
+while [ $a -le $n ]
 do 
-echo -n " $a $b "
+echo -n "$a+1/"
 
 a=$(( $a + 1 ))
-b=$(( $b + 5 ))
+
 done
 echo ""

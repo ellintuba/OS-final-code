@@ -1,6 +1,12 @@
 #!/bin/sh
-echo “Input Value of a  b :”
-read a
-read b
-c= expr $a + $b
-echo $c
+echo "Enter Vlaue"
+read n
+
+while [ $a -le $n ]
+do 
+echo -n " $a "
+
+a=$(( $a + 2))
+
+done
+echo ""

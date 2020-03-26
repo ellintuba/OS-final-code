@@ -1,13 +1,11 @@
 #!/bin/sh
-a=2
-echo "Enter Vlaue"
-read n
-
-while [ $a -le $n ]
+a=1
+b=5
+while [ $b -le 50 ]
 do 
-echo -n " $a "
+echo -n " $a $b "
 
-a=$(( $a + 2))
-
+a=$(( $a + 1 ))
+b=$(( $b + 5 ))
 done
 echo ""

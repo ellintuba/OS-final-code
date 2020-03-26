@@ -1,15 +1,15 @@
 #!/bin/sh
 a=1
-b=2
+sum=0
 echo "Enter value"
 read n
-n=$(( $n -1 ))
 while [ $a -le $n ]
 do 
-echo -n "$a/$b+"
 
+b=$(( $a * $a ))
+sum=$(( $sum + $b ))
 a=$(( $a + 1 ))
-b=$(( $b + 1 ))
 
 done
+echo "$sum"
 echo ""

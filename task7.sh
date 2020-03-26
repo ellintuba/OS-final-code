@@ -1,16 +1,17 @@
 #!/bin/sh
-echo “enter the value of a b c”
-read a
-read b
-read c
-if test $a - > $b –a $a –gt $c
+echo "Enter number of Integers"
+read n
+echo "enter value no 1"
+read j
+i=2
+while [ $i -le $n ]
+do
+echo "Enter value no $i"
+read k
+if [ $j -lt $k ]
 then
-echo “a is greatest”
-else
-if test $b –gt $c
-then
-echo “b is greatest”
-else
-echo “c is greatest”
+j=$k
 fi
-fi
+i=$(( $i + 1 ))
+done
+echo "Greatest input is: $j"

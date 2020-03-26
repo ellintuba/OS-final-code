@@ -1,13 +1,9 @@
 #!/bin/sh
-echo "enter purchase amount"
-read pa
-if [ $pa –lt 1000 ]
+str1="AIUB"
+str2="AIUB"
+if [ $str1 == $str2 ]
 then
-tax=`echo $pa \* 2 /100 | bc`
-discount=`echo $pa \* 10 / 100 | bc`
+echo "String are same"
 else
-tax=`echo $pa \* 5 /100 | bc`
-discount=‘echo $pa \* 20 / 100 | bc`
+echo "String are not same"
 fi
-amount=`expr $pa + $tax - $discount`
-echo cash payment =$amount
